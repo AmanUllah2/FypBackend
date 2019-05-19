@@ -1,0 +1,25 @@
+{
+  "name": "fypweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aman ullah",
+  "license": "ISC",
+  "dependencies": {
+    "alert-node": "^1.2.4",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.18.3",
+    "dialog": "^0.3.1",
+    "express": "^4.16.4",
+    "js-alert": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.2",
+    "morgan": "^1.9.1",
+    "opn": "^6.0.0",
+    "popups": "^1.1.3",
+    "save": "^2.3.3"
+  }
+}
