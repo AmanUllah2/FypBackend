@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('./config/database'); //database configuration
 var jwt = require('jsonwebtoken');
 var dialog = require('dialog');
-
+const multer = require('multer');
+const csv = require('fast-csv');
+const upload = multer({ dest: 'tmp/csv/' });
 const app = express();
 
 
