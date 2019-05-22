@@ -6,6 +6,7 @@ var dialog = require('dialog');
 const multer = require('multer');
 const csv = require('fast-csv');
 const upload = multer({ dest: 'tmp/csv/' });
+const fs=require('fs');
 
 module.exports = {
 
@@ -51,7 +52,7 @@ module.exports = {
         res.json({
           status: "success",
           message: "Users found successfully!!!",
-          data: null
+          data: result
         });
     });
   },
@@ -64,10 +65,14 @@ module.exports = {
         fileRows.push(data); // push each row
       })
       .on("end", function () {
-        console.log(fileRows)
         fs.unlinkSync(req.file.path);   // remove temp file
         //process "fileRows" and respond
-      })
+        const getSearches = fileRows.find(element => element[0] === req.body.searchBy);
+        res.json({
+          status: "success",
+          data: getSearches
+        });
+      });
   }
   
 }
